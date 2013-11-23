@@ -24,13 +24,16 @@ type bson_element = [
   | `maxkey
 ]
 
-(** Transform an [bson_element] into an [Bson.element] *)
+(** [to_elt elt] ::
+    Transform an [bson_element] into an [Bson.element] *)
 val to_elt : bson_element -> Bson.element
 
-(** Same as above, but instead of taking only one element, it takes a
+(** [to_elts elts] ::
+    Same as above, but instead of taking only one element, it takes a
     [bson_element] list. *)
 val to_elts : bson_element list -> Bson.element list
 
-(** Helper function to create a BSON document. If [?doc] is not used,
+(** [create_doc ?doc elts] ::
+    Helper function to create a BSON document. If [?doc] is not used,
     an empty document [Bson.empty] will be used by default. *)
 val create_doc : ?doc:Bson.t -> (string * bson_element) list -> Bson.t
