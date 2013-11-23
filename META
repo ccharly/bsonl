@@ -1,0 +1,12 @@
+# OASIS_START
+# DO NOT EDIT (digest: 8422bc9be8e1e954956bbf98b8cc5bc4)
+version = "0.1"
+description = "Ocaml mongodb layer"
+requires = "bson"
+archive(byte) = "bsonl.cma"
+archive(byte, plugin) = "bsonl.cma"
+archive(native) = "bsonl.cmxa"
+archive(native, plugin) = "bsonl.cmxs"
+exists_if = "bsonl.cma"
+# OASIS_STOP
+
