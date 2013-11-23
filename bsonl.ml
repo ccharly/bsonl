@@ -47,3 +47,28 @@ let create_doc ?doc elts =
     (fun doc (name,elt) ->
       Bson.add_element name (to_elt elt) doc)
     (doc) (elts)
+
+let get_next_seq seq id =
+  let default = 1 in
+  let to_i32 = Int32.of_int in
+  let of_i32 = Int32.to_int in
+  let match_ = create_doc [
+      ("_id", `string id);
+  ] in
+  let docs = MongoReply.get_document_list (Mongo.find_q seq match_) in
+  if List.length docs = 0 then begin
+    Mongo.insert seq [create_doc ~doc:match_ [
+        ("seq", `int32 (to_i32 default));
+      ]
+    ];
+    default
+  end else begin
+    let doc = List.nth docs 0 in
+    let doc' = create_doc [
+        ("$inc", `doc (create_doc [
+            ("seq", `int32 (to_i32 1));
+        ]))
+    ] in
+    Mongo.update_one seq (match_, doc');
+    (of_i32 (Bson.get_int32 (Bson.get_element "seq" doc))) + 1
+  end

@@ -37,3 +37,7 @@ val to_elts : bson_element list -> Bson.element list
     Helper function to create a BSON document. If [?doc] is not used,
     an empty document [Bson.empty] will be used by default. *)
 val create_doc : ?doc:Bson.t -> (string * bson_element) list -> Bson.t
+
+(** [get_next_seq mongo collection] ::
+    Helper function to simulate sequence (autoincrement) of an id. *)
+val get_next_seq : Mongo.t -> string -> int
