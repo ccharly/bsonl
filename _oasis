@@ -10,7 +10,7 @@ Library bsonl
   Path:                 ./
   BuildTools:           ocamlbuild
   Modules:              Bsonl
-  BuildDepends :        bson
+  BuildDepends :        bson,mongo
 
 Document bsonl
   Title:                Mongo docs

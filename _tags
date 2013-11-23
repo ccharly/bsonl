@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: b32fb91e4e88d685b84e55c9b5df717c)
+# DO NOT EDIT (digest: fc882bd7eb0da13d4ca515ba74505c95)
 # Ignore VCS directories, you can use the same kind of rule outside 
 # OASIS_START/STOP if you want to exclude directories that contains 
 # useless stuff for the build process
@@ -16,4 +16,5 @@
 # Library bsonl
 "bsonl.cmxs": use_bsonl
 <*.ml{,i}>: pkg_bson
+<*.ml{,i}>: pkg_mongo
 # OASIS_STOP
