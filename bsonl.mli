@@ -33,6 +33,10 @@ val to_elt : bson_element -> Bson.element
     [bson_element] list. *)
 val to_elts : bson_element list -> Bson.element list
 
+(** [add_to_doc ~doc elts] ::
+    Helper function to add element to a BSON document. *)
+val add_to_doc : doc:Bson.t -> (string * bson_element) list -> Bson.t
+
 (** [create_doc ?doc elts] ::
     Helper function to create a BSON document. If [?doc] is not used,
     an empty document [Bson.empty] will be used by default. *)

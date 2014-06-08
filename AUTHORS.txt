@@ -1,5 +1,8 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 8526f93721c252947a6900626baa37fb) *)
-Authors of bsonl.ml
-lisqlql
+(* DO NOT EDIT (digest: bab55fe684833495fa3d312ba7191554) *)
+
+Authors of bsonl.ml:
+
+* lisqlql
+
 (* OASIS_STOP *)

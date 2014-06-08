@@ -1,10 +1,15 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: feef8e37b52f5fa128fd3c4212e04259) *)
-This is the README file for the bsonl.ml distribution.
+(* DO NOT EDIT (digest: 5dfeb7bfcacf00b5f0a7cc87fbbcd14d) *)
 
-Ocaml mongodb layer
+bsonl.ml - Ocaml mongodb layer
+==============================
 
-See the files INSTALL.txt for building and installation instructions. 
+See the file [INSTALL.txt](INSTALL.txt) for building and installation
+instructions.
 
+Copyright and license
+---------------------
+
+bsonl.ml is distributed under the terms of the MIT License.
 
 (* OASIS_STOP *)

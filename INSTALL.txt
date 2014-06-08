@@ -1,14 +1,16 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 98de2a913f2a46835e7c6559d20b54d5) *)
+(* DO NOT EDIT (digest: 3ec855d73264dc0f2f08e7c1097299ca) *)
+
 This is the INSTALL file for the bsonl.ml distribution.
 
 This package uses OASIS to generate its build system. See section OASIS for
-full information. 
+full information.
 
 Dependencies
 ============
 
 In order to compile this package, you will need:
+
 * ocaml for all, doc bsonl
 * findlib
 * bson
@@ -25,7 +27,7 @@ Installing
 Uninstalling
 ============
 
-1. Go to the root of the package 
+1. Go to the root of the package
 2. Run 'ocaml setup.ml -uninstall'
 
 OASIS

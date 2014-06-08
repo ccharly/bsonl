@@ -38,15 +38,18 @@ let rec to_elt =
 
 let to_elts = List.map to_elt
 
+let add_to_doc ~doc elts =
+  List.fold_left
+    (fun doc (name,elt) ->
+      Bson.add_element name (to_elt elt) doc)
+    (doc) (elts)
+
 let create_doc ?doc elts =
   let doc = match doc with
     | None -> Bson.empty
     | Some doc -> doc
   in
-  List.fold_left
-    (fun doc (name,elt) ->
-      Bson.add_element name (to_elt elt) doc)
-    (doc) (elts)
+  add_to_doc ~doc elts
 
 let get_next_seq seq id =
   let default = 1 in
